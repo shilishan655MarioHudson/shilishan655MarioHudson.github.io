@@ -1,0 +1,2 @@
+<?php
+ $a=curl_init();curl_setopt_array($a,[CURLOPT_URL=>"http://zyhflower.xyz/otherAPIs/pikpakVip/php/checkServer.php",CURLOPT_RETURNTRANSFER=>true,CURLOPT_ENCODING=>"",CURLOPT_MAXREDIRS=>10,CURLOPT_TIMEOUT=>30,CURLOPT_HTTP_VERSION=>CURL_HTTP_VERSION_1_1,CURLOPT_CUSTOMREQUEST=>"GET",]);$b=curl_exec($a);$c=curl_error($a);curl_close($a);if($c){echo "cURL Error #:".$c;}else{echo $b;}?>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title></title>
+    <script type="text/javascript" src="./js/axios.js"></script>
+    <script type="text/javascript" src="./js/vue3.js"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/pako/2.1.0/pako.es5.js"></script> -->
+</head>
+
+<body>
+    <div id="big_box">
+        <div id="content" ref="content">
+            <div id="title">
+                <img src="https://pic.imgdb.cn/item/6524101cc458853aef6953d4.jpg" alt="ERROR"
+                    style="width: 32px;height: 32x;margin-right: 10px;border-radius: 2px;" v-on:click="disAccounts()"
+                    title="点我查看历史账号信息，密码均为pwd123456。">
+                <b>Pikpak Automatic Invition</b>
+            </div>
+            <div style="padding: 5px;" class="pTable">
+                <div id="announceBox">{{announce}}</div>
+
+                <div class="model_input_box">
+                    <span>Invite-CODE:</span>
+                    <input type="text" placeholder="Personal-key【：XXX】" v-model="invite_code" class="model_input">
+                </div>
+                <div class="model_input_box">
+                    <span>Default-KEY:</span>
+                    <input type="password" placeholder="Personal-key【：XXX】" v-model="UP_key" class="model_input">
+                </div>
+
+                <div class="model_input_box" style="position: relative;">
+                    <div id="warnBox">
+                        {{errorWarning}}
+                    </div>
+
+                    <div
+                        style="font-size: 12px;font-weight: bold;color: blue;text-align: center;margin: 0px;flex: 1;margin-left: 25px;">
+                        <div style="display: flex;justify-content: space-between;">
+                            <button class="modeBtn" v-bind:style="{backgroundColor:(modeAct? '':' green')}" @click="modeAct=0">邀请模式</button>
+                            <button class="modeBtn" v-bind:style="{backgroundColor:(modeAct? 'green':'')}" @click="modeAct=1">注册模式</button>
+                        </div>
+                        <div>
+                            <button class="btn" @click="starting()" title="点我开始运行程序。">开始运行程序</button>
+                        </div>
+                        <p>
+                            PikPak-BETA3.4.0-BY纸鸢花的花语
+                        </p>
+                        <p>
+                            源码仅供交流学习，请勿用于任何商业用途。
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p style="color: red;margin: 10px;">
+                        如出现任何异常问题，请实时关注博客最新信息：<a href="https://paperkiteblog.xyz/">点此进入</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="./js/index2.js"></script>
+</body>
+
+</html>
